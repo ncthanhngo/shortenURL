@@ -24,7 +24,7 @@ public class UrlController {
     public ResponseEntity<String> getOriginalUrl(@PathVariable String shortUrl){
         return ResponseEntity.ok(urlService.getOriginalUrl(shortUrl));
     }
-    @GetMapping("/{shortUrl}")
+    @GetMapping("/info/{shortUrl}")
     public ResponseEntity<String> getInfoAccessUrl(@PathVariable String shortUrl, HttpServletRequest request){
         //Get user Ipaddress
         String ipAddress = request.getRemoteAddr();

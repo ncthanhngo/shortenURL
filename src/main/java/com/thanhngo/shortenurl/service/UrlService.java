@@ -40,8 +40,10 @@ public class UrlService {
                 .accessTime(accessTime)
                 .build();
         urlAccessRepository.save(urlAccess);
-        //Count the access url
-        int clickCount = urlAccessRepository.countByUrl(shortUrl);
+       // Count the access url
+        Url u = urlRepository.findByShortUrl(shortUrl);
+
+        int clickCount = urlAccessRepository.countByUrlId(u.getId());
         return clickCount;
     }
 }

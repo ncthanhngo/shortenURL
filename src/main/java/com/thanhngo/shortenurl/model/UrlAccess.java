@@ -13,11 +13,13 @@ import java.time.LocalDateTime;
 @Builder
 public class UrlAccess {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)// Auto increment
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @ManyToOne
-    @JoinColumn(name = "short_url", referencedColumnName = "shortUrl")
+    @JoinColumn(name = "urlId", referencedColumnName = "id") // Change to match the column name in Url entity
     private Url url;
+
     private String ipAddress;
     private String browserInfo;
     private String deviceInfo;
