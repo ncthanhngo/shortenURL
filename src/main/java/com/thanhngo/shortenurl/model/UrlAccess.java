@@ -16,9 +16,7 @@ public class UrlAccess {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "urlId", referencedColumnName = "id") // Change to match the column name in Url entity
-    private Url url;
+    private String shortUrl;
 
     private String ipAddress;
     private String browserInfo;

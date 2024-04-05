@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 
 public interface UrlAccessRepository extends JpaRepository<UrlAccess,Long> {
-    @Query("select count(a) from UrlAccess a where a.url.id = :urlId")
-    int countByUrlId(@Param("urlId") Long urlId);
+    @Query("SELECT COUNT(a) FROM UrlAccess a WHERE a.shortUrl = :shortUrl")
+    int countByShortUrl(@Param("shortUrl") String shortUrl);
 
 }

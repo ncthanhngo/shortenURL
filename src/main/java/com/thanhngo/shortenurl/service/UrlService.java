@@ -33,7 +33,10 @@ public class UrlService {
     //Save infomation from user access the url
     public int saveUrlAccess(String shortUrl, String ipAddress,String browserInfo, String deviceInfo, LocalDateTime accessTime){
         //Save access info to database
+        Url url = urlRepository.findByShortUrl(shortUrl);
+
         UrlAccess urlAccess = UrlAccess.builder()
+                .shortUrl(shortUrl)
                 .ipAddress(ipAddress)
                 .browserInfo(browserInfo)
                 .deviceInfo(deviceInfo)
@@ -41,9 +44,8 @@ public class UrlService {
                 .build();
         urlAccessRepository.save(urlAccess);
        // Count the access url
-        Url u = urlRepository.findByShortUrl(shortUrl);
 
-        int clickCount = urlAccessRepository.countByUrlId(u.getId());
+        int clickCount = urlAccessRepository.countByShortUrl(shortUrl);
         return clickCount;
     }
 }
