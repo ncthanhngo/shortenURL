@@ -1,7 +1,7 @@
-# Shorten URL API - Công cụ rút gọn URL
+# Shorten URL API - URL Shortening Tool
 
-Người dùng nhập một đường link, api sẽ rút gọn và trả về một mã gồm 6 ký tự (số và chữ)
+Users input a link, and the API will shorten it and return a code consisting of 6 characters (numbers and letters).
 
-Mỗi khi người dùng vào URL rút gọn đã được tạo trước đó, các thông tin về truy cập của người dùng sẽ được lưu lại bao gồm, địa chỉ IP, trình duyệt, thiết bị và thời gian. 
+Each time a user visits a previously created shortened URL, information about the user's access will be recorded, including IP address, browser, device, and time.
 
-Ứng dụng cung cấp số liệu thống kê số lần mỗi URL rút gọn được sử dụng.
+The application provides statistics on the number of times each shortened URL has been used.
