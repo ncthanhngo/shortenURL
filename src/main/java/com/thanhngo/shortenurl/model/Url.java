@@ -1,8 +1,6 @@
 package com.thanhngo.shortenurl.model;
-
 import jakarta.persistence.*;
 import lombok.*;
-
 @Entity
 @Table(name = "url")
 @Getter

@@ -1,23 +1,17 @@
 package com.thanhngo.shortenurl.controller;
-
 import com.thanhngo.shortenurl.model.Url;
 import com.thanhngo.shortenurl.ropository.UrlRepository;
 import com.thanhngo.shortenurl.service.UrlService;
-
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.lang.*;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import eu.bitwalker.useragentutils.UserAgent;
-
-
-
 @RestController
 @RequestMapping("api/v1")
 public class UrlController {

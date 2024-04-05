@@ -1,5 +1,4 @@
 package com.thanhngo.shortenurl.service;
-
 import com.thanhngo.shortenurl.model.Url;
 import com.thanhngo.shortenurl.model.UrlAccess;
 import com.thanhngo.shortenurl.ropository.UrlAccessRepository;
@@ -7,9 +6,7 @@ import com.thanhngo.shortenurl.ropository.UrlRepository;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
-
 @Service
 public class UrlService {
     @Autowired
